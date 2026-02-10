@@ -1,0 +1,107 @@
+.principles {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+  text-align: center;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.principle-card {
+  position: relative;
+  padding: 40px 30px;
+  background: var(--white);
+  border-radius: 20px;
+  border: 1px solid var(--gray-200);
+  transition: all var(--transition-normal);
+  text-align: left;
+  overflow: hidden;
+}
+
+.principle-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-dark) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-normal);
+}
+
+.principle-card:hover {
+  border-color: var(--primary-200);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-5px);
+}
+
+.principle-card:hover::before {
+  transform: scaleX(1);
+}
+
+.principle-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-100);
+  line-height: 1;
+}
+
+.principle-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--primary-100) 0%, var(--primary-200) 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.principle-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--accent);
+}
+
+.principle-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+}
+
+.principle-description {
+  font-size: 0.9375rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+@media (max-width: 968px) {
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .principles {
+    padding: var(--section-padding-mobile) 0;
+  }
+  
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .principle-card {
+    padding: 30px 24px;
+  }
+}

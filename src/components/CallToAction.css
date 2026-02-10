@@ -1,0 +1,131 @@
+.cta {
+  padding: var(--section-padding) 0;
+  background: linear-gradient(135deg, var(--primary-500) 0%, var(--accent-dark) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-background {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cta-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cta-shape-1 {
+  width: 600px;
+  height: 600px;
+  top: -300px;
+  right: -200px;
+}
+
+.cta-shape-2 {
+  width: 400px;
+  height: 400px;
+  bottom: -200px;
+  left: -100px;
+}
+
+.cta-shape-3 {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 30%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.cta-title .accent {
+  color: var(--primary-100);
+}
+
+.cta-text {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.cta-message {
+  margin-bottom: 40px;
+}
+
+.message-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.message-card p {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--white);
+  font-style: italic;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.message-card strong {
+  color: var(--primary-100);
+}
+
+.message-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta .btn-primary {
+  background: var(--white);
+  color: var(--accent-dark);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta .btn-primary:hover {
+  background: var(--primary-50);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 640px) {
+  .cta {
+    padding: var(--section-padding-mobile) 0;
+  }
+  
+  .message-card {
+    padding: 30px 24px;
+  }
+  
+  .message-card p {
+    font-size: 1.0625rem;
+  }
+}

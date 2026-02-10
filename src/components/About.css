@@ -1,0 +1,149 @@
+.about {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-content {
+  text-align: left;
+}
+
+.about-text {
+  font-size: 1.0625rem;
+  color: var(--gray-600);
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.about-text strong {
+  color: var(--accent);
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.feature {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background: linear-gradient(135deg, var(--primary-100) 0%, var(--primary-200) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--accent);
+}
+
+.feature h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 4px;
+}
+
+.feature p {
+  font-size: 0.9375rem;
+  color: var(--gray-500);
+}
+
+/* Visual Card */
+.about-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.visual-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 40px;
+  background: linear-gradient(135deg, var(--primary-50) 0%, var(--white) 100%);
+  border-radius: 24px;
+  box-shadow: var(--shadow-xl);
+}
+
+.visual-inner {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal);
+}
+
+.visual-inner:hover {
+  transform: translateY(-5px);
+}
+
+.visual-letter {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.visual-word {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 968px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .about-content {
+    order: 2;
+  }
+  
+  .about-visual {
+    order: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: var(--section-padding-mobile) 0;
+  }
+  
+  .visual-card {
+    padding: 24px;
+    gap: 16px;
+  }
+  
+  .visual-inner {
+    padding: 20px 16px;
+  }
+  
+  .visual-letter {
+    font-size: 2.5rem;
+  }
+}

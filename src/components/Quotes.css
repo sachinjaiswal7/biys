@@ -1,0 +1,159 @@
+.quotes {
+  padding: var(--section-padding) 0;
+  background: linear-gradient(180deg, var(--primary-50) 0%, var(--white) 100%);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.quotes-background {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.quote-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.quote-shape-1 {
+  width: 500px;
+  height: 500px;
+  background: var(--primary-100);
+  top: -200px;
+  left: -200px;
+}
+
+.quote-shape-2 {
+  width: 400px;
+  height: 400px;
+  background: var(--primary-200);
+  bottom: -150px;
+  right: -150px;
+}
+
+.quotes-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--white);
+  border: none;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+  background: var(--primary-50);
+  transform: scale(1.1);
+}
+
+.carousel-btn svg {
+  width: 24px;
+  height: 24px;
+  color: var(--accent);
+}
+
+.quote-card {
+  max-width: 700px;
+  padding: 60px 50px;
+  background: var(--white);
+  border-radius: 24px;
+  box-shadow: var(--shadow-xl);
+  position: relative;
+}
+
+.quote-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-100) 0%, var(--primary-200) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+}
+
+.quote-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--accent);
+}
+
+.quote-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 500;
+  color: var(--gray-800);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.quote-author {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.quote-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gray-300);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.indicator:hover {
+  background: var(--primary-300);
+}
+
+.indicator.active {
+  background: var(--accent);
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .quotes {
+    padding: var(--section-padding-mobile) 0;
+  }
+  
+  .quotes-carousel {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .carousel-btn {
+    display: none;
+  }
+  
+  .quote-card {
+    padding: 40px 30px;
+    margin: 0 16px;
+  }
+}
